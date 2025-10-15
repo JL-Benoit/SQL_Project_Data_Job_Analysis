@@ -1,7 +1,5 @@
 /*
-Les données disponibles en France avec la condition "salary_year_avg IS NOT NULL" ne permettent pas d’obtenir une analyse exploitable.
-Nous avons donc ajusté notre approche : plutôt que de nous focaliser sur les compétences associées aux postes les mieux rémunérés,
-nous avons choisi d’analyser les compétences les plus recherchées sur le marché français et nous avons extrait le top 5.
+
 */
 
 WITH remote_job_skills AS (
@@ -33,12 +31,5 @@ LIMIT 5;
 
 
 /*
-Le resultat est clair, les compétences les plus recherchées sur le marché français sont les suivantes:
-1. SQL
-2. Python
-3. Power BI
-4. Excel
-5. Tableau
 
-Nous devrions donc nous concentrer sur ces compétences pour tenter de decrocher un emploi d’analyste de données/data !
 */
