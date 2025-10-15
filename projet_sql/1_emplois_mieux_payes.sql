@@ -1,6 +1,6 @@
 /*
-Question : Quels sont les emplois d’analyste de données / data les mieux rémunérés ?
-- Identifier le top 10 des postes d’analyste de données / data les mieux rémunérés en télétravail.
+Question : Quels sont les emplois d’analyste de données/data les mieux rémunérés ?
+- Identifier le top 10 des postes d’analyste de données/data les mieux rémunérés en télétravail.
 - Se concentrer uniquement sur les postes avec un salaire renseigné (aucune valeur NULL).
 - Objectif : mettre en lumière les opportunités les mieux rémunérées pour les analystes de données,
 offrant une vue d’ensemble sur la santé et l’attractivité du poste sur le marché de l’emploi.
@@ -28,7 +28,7 @@ LIMIT 10;
 
 
 /*Cependant, la data en France avec la condition "salary_year_avg IS NOT NULL" ne nous permet pas de voir correctement le marché Francais. 
-Donc le query est modifié en enlevant la condition "salary_year_avg IS NOT NULL" pour avoir un meilleur visuel. 
+Donc nous avons modifié la requête en enlevant la condition "salary_year_avg IS NOT NULL" pour avoir un meilleur visuel. 
 */
 
 SELECT
