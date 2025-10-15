@@ -4,32 +4,30 @@ Nous avons donc ajusté notre approche : plutôt que de nous focaliser sur les c
 nous avons choisi d’analyser les compétences les plus recherchées sur le marché français et nous avons extrait le top 5.
 */
 
-WITH top_paying_jobs AS (
-    SELECT
-        job_id,
-        company_dim.name AS company_name,
-        job_title_short,
-        salary_year_avg
-    FROM
-        job_postings_fact
-    LEFT JOIN company_dim ON job_postings_fact.company_id = company_dim.company_id
+WITH remote_job_skills AS (
+    SELECT 
+        skill_id,
+        COUNT(*) AS skill_count
+    FROM 
+        skills_job_dim AS skills_to_job
+    INNER JOIN 
+        job_postings_fact AS job_postings ON job_postings.job_id = skills_to_job.job_id
     WHERE 
-        job_title_short = 'Data Analyst' 
-        AND job_location = 'France'
-    ORDER BY
-        salary_year_avg DESC
+        job_postings.job_work_from_home = TRUE 
+        AND job_postings.job_title_short = 'Data Analyst'
+    GROUP BY 
+        skill_id
 )
 SELECT 
-    skills_dim.skills,
-    COUNT(DISTINCT top_paying_jobs.job_id) AS job_count
+    skills.skill_id,
+    skills AS skill_name,
+    skill_count
 FROM 
-    top_paying_jobs
-INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
-INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
-GROUP BY 
-    skills_dim.skills
-ORDER BY 
-    job_count DESC
+    remote_job_skills
+INNER JOIN 
+    skills_dim AS skills ON skills.skill_id = remote_job_skills.skill_id
+ORDER BY
+    skill_count DESC
 LIMIT 5;
 
 
