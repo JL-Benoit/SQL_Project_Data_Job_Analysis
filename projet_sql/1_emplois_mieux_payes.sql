@@ -47,4 +47,4 @@ WHERE
     job_location = 'France' 
 ORDER BY
     salary_year_avg DESC
-LIMIT 10;
+LIMIT 100;
