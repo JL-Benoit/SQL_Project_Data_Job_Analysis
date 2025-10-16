@@ -11,13 +11,12 @@ En me concentrant spécifiquement sur le poste d’analyste de données/data, ce
 
 🕵️ A la recherche de mes requêtes ? C'est ici : [projet_sql](/projet_sql/)
 
-*Disclaimer : Mes requêtes sont en anglais car la base de donnees est en anglais.*
+*Disclaimer : Mes requêtes sont en anglais car la base de données est en anglais.*
 
 
 
 # Un peu d'histoire
-Autrefois graphiste, puis photographe freelance spécialisé en photographie animalière, je me réoriente aujourd’hui vers une activité qui me correspond davantage :\
-**l’analyse de données/data.**
+Autrefois graphiste, puis photographe freelance spécialisé en photographie animalière, je me réoriente aujourd’hui vers une activité qui me correspond davantage : **l’analyse de données/data.**
 
 Débutant dans ce domaine, je me forme aux compétences clés pour devenir analyste de données, notamment SQL. Mais comment savoir exactement quelles compétences acquérir pour progresser efficacement ?\
 La réponse : en analysant les données elles-mêmes… et c’est exactement ce que je fais **<ins>grâce à SQL !</ins>**
@@ -40,7 +39,7 @@ Pour explorer le marché des emplois d’analyste de données, j’ai utilisé :
 
 
 # Analyse !
-Chaque requête de ce projet avait pour objectif d’explorer un aspect spécifique du marché des emplois d’analyste de données. Voici comment j’ai abordé chaque question :
+Chaque requête de ce projet avait pour objectif d’explorer un aspect spécifique du marché des emplois d’analyste de données/data. Voici comment j’ai abordé chaque question :
 
 ### 1. Quels sont les emplois d’analyste de données/data les mieux rémunérés ?
 Pour identifier les postes les mieux rémunérés, j’ai filtré les offres d’analyste de données en fonction du salaire annuel moyen et de la localisation, en me concentrant sur les postes en télétravail. Cette requête met en évidence les opportunités les plus lucratives dans le domaine.
@@ -104,18 +103,18 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY 
     salary_year_avg DESC;
 ```
-Le resultat est clair, les compétences les mieux rémunérés en télétravail depuis la France sont les suivantes:
+Le résultat est clair, les compétences les mieux rémunérées en télétravail depuis partout (y compris la France) sont les suivantes :
 
-1. SQL (Apparait 12 fois)
-2. Python (Apparait 11 fois)
-3. Tableau (Apparait 8 fois)
-4. R (Apparait 5 fois)
-5. Excel (Apparait 3 fois)
+1. **SQL** (Apparait 12 fois)
+2. **Python** (Apparait 11 fois)
+3. **Tableau** (Apparait 8 fois)
+4. **R** (Apparait 5 fois)
+5. **Excel** (Apparait 3 fois)
 
 Il faudrait donc se concentrer sur ces compétences pour tenter de décrocher les emplois d’analyste de données/data les mieux rémunérés !
 
 ### 3. Quelles sont les compétences les plus demandées pour les analystes de données/data ?
-Cette prochaine requête a permis d’identifier les compétences les plus souvent demandées dans les offres d’emploi, orientant ainsi l’attention vers les domaines les plus recherchés.
+Cette prochaine requête a permis d’identifier les compétences les plus souvent **demandées** dans les offres d’emploi, orientant ainsi l’attention vers les domaines les plus recherchés.
 
 ```sql
 SELECT 
@@ -161,14 +160,14 @@ ORDER BY demand_count DESC
 LIMIT 5;
 ```
 Cette nouvelle requête nous donne les 5 compétences les plus demandées sur le marché du travail en France. Ces compétences sont :
-1. SQL (Apparait 726 fois)
-2. Python (Apparait 534 fois)
-3. Power BI (Apparait 447 fois)
-4. Excel (Apparait 372 fois)
-5. sas (Apparait 318 fois)
+1. **SQL** (Apparait 726 fois)
+2. **Python** (Apparait 534 fois)
+3. **Power BI** (Apparait 447 fois)
+4. **Excel** (Apparait 372 fois)
+5. **sas** (Apparait 318 fois)
 
 *Finalement, des informations intéressantes a analyser !*\
-Nous pouvons en conclure que, parmi les 5 compétences les plus demandées sur le marché du travail global **-et-** celles les plus demandées en France, les compétences sur lesquelles je devrais me concentrer sont :
+Nous pouvons en conclure que, parmi les 5 compétences les plus **demandées** sur le marché du travail global **-et-** celles les plus **demandées** en France, les compétences sur lesquelles je devrais me concentrer sont :
 
 **1. SQL**\
 **2. Python**\
@@ -205,7 +204,7 @@ Voici un aperçu des résultats concernant les compétences les mieux rémunér�
 
 
 ### 5. Quelles sont les compétences les plus intéressantes à apprendre ?
-Autrement dit, celles qui sont à la fois **très demandées** et **bien rémunérées.**\
+Autrement dit, celles qui sont à la fois **très demandées <ins>et</ins> bien rémunérées.**\
 En combinant les informations sur la demande et les salaires, cette requête visait à identifier les compétences à la fois très demandées et bien rémunérées, afin de définir les priorités stratégiques en matière de développement des compétences.
 
 ```sql
@@ -247,14 +246,6 @@ Des outils comme Tableau et Looker, avec respectivement 230 et 49 mentions, et d
 La demande pour les compétences en bases de données traditionnelles et NoSQL *(Oracle, SQL Server, NoSQL)*, avec des salaires moyens compris entre 97 000$ et 105 000$, montre que la maîtrise du stockage, de la gestion et de la récupération des données reste indispensable.
 
 
-# 💡 Ce que j'ai appris 
-
-- J’ai appris les bases de SQL ainsi que la logique qui structure ce langage.
-- Je me suis familiarisé avec la création et la gestion de bases de données sous **PostgreSQL.**
-- J’ai découvert la puissance de SQL pour trier, filtrer et comparer efficacement des millions de lignes de données, et pour rendre l’information plus claire et exploitable.
-- J’ai appris à utiliser **Visual Studio Code** pour rédiger et exécuter mes requêtes SQL.
-- Je me suis initié à **GitHub** afin de partager mes analyses et documenter mes projets.
-
 # Conclusion
 Informations générales issus de l’analyse:
 
@@ -272,6 +263,16 @@ Il existe des postes d’analyste de données en télétravail, mais les donnée
 
 5. **Compétences optimales pour la valeur sur le marché :**\
  SQL domine à la fois en termes de demande et de salaire moyen, ce qui en fait <ins>l’une des compétences les plus stratégiques à acquérir</ins> pour maximiser sa valeur sur le marché du travail.
+
+
+# 💡 Ce que j'ai appris 
+
+- J’ai appris les bases de SQL ainsi que la logique qui structure ce langage.
+- Je me suis familiarisé avec la création et la gestion de bases de données sous **PostgreSQL.**
+- J’ai découvert la puissance de SQL pour trier, filtrer et comparer efficacement des millions de lignes de données, et pour rendre l’information plus claire et exploitable.
+- J’ai appris à utiliser **Visual Studio Code** pour rédiger et exécuter mes requêtes SQL.
+- Je me suis initié à **GitHub** afin de partager mes analyses et documenter mes projets.
+
 
  # 🤔 En ce qui me concerne
 
