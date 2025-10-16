@@ -63,5 +63,5 @@ les compétences sur lesquelles nous devrions nous concentrer sont :
 3. Excel
 4 et 5. Un outil de Business intelligence comme Power BI ou Tableau
 
-Ainsi, nous voyons qu’il est possible de nous concentrer sur moins de cinq compétences essentielles, ce qui constitue une information précieuse !
+Ainsi, nous voyons qu’il est possible de nous concentrer sur moins de cinq compétences essentielles, ce qui nous fera gagner du temps !
 */
