@@ -8,13 +8,11 @@ By focusing specifically on data analyst roles, this project explores:
 - the most in-demand skills.
 - the skills associated with high salaries.
 </br>
-</br>
 
 🕵️ Looking for my SQL queries? They’re here: [projet_sql](/projet_sql/)
 
-</br>
 
-# Some background
+# Some background information
 Formerly a graphic designer and freelance photographer specializing in wildlife photography, I am now transitioning towards a career that suits me better: **data analysis!**
 
 As a beginner in this field, I’m training in the key skills needed to become a data analyst, especially SQL. But how can I know exactly which skills to acquire in order to progress optimally and efficiently?
@@ -26,7 +24,6 @@ Through my queries, I sought to answer the following questions:
 - *Which skills are most in demand among data analysts?*
 - *Which skills are associated with higher salaries?*
 - *Which skills are the most strategic to develop to advance in this field?*
-</br>
 
 
 # 🪚 Tools used
@@ -35,7 +32,6 @@ To explore the job market for data analyst roles, I used:
 - **PostgreSQL** to manage the data.
 - **Visual Studio Code** to run my queries.
 - **GitHub** to share my work.
-</br>
 
 
 # Analysis time !
