@@ -1,51 +1,55 @@
 # Introduction
-Ceci est mon premier projet en SQL. J’ai principalement appris SQL grâce à ce projet, mais aussi en suivant le cours associé sur la chaîne YouTube de **[Luke Barousse](https://www.youtube.com/watch?v=7mz73uXD9DA&t=12840s)**.
-Le cours s’appuie sur une base de données créée par Luke Barousse, ayant beaucoup d'informations sur le marché du travail pour les postes liés à la data en **2023** *( postes, salaires, lieux, compétences clés, etc.)*.\
+This is my first SQL project. I mainly learned SQL through this project, but also by following the associated course on **[Luke Barousse's](https://www.youtube.com/watch?v=7mz73uXD9DA&t=12840s)**.
+YouTube channel.
+The course is based on a database he created, containing extensive information about the job market for data related roles in 2023 (positions, salaries, locations, key skills, etc.).
 
+By focusing specifically on data analyst roles, this project explores:
+- the highest-paying positions.
+- the most in-demand skills.
+- the skills associated with high salaries.
+</br>
+</br>
 
-En me concentrant spécifiquement sur le poste d’analyste de données/data, ce projet explore :
-- **les postes les mieux rémunérés**
-- **les compétences les plus recherchées**
-- **les compétences associées à un salaire élevé.**
-
-
-🕵️ A la recherche de mes requêtes ? C'est ici : [projet_sql](/projet_sql/)
-
-*Disclaimer : Mes requêtes sont en anglais car la base de données est en anglais.*
-
-
-
-# Un peu d'histoire
-Autrefois graphiste, puis photographe freelance spécialisé en photographie animalière, je me réoriente aujourd’hui vers une activité qui me correspond davantage : **l’analyse de données/data.**
-
-Débutant dans ce domaine, je me forme aux compétences clés pour devenir analyste de données, notamment SQL. Mais comment savoir exactement quelles compétences acquérir pour progresser efficacement ?\
-La réponse : en analysant les données elles-mêmes… et c’est exactement ce que je fais **<ins>grâce à SQL !</ins>**
-
-À travers mes requêtes, j’ai cherché à répondre aux questions suivantes :
-- *Quels postes d’analyste de données offrent les meilleurs salaires ?*
-- *Quelles compétences sont nécessaires pour ces postes bien rémunérés ?*
-- *Quelles compétences sont les plus demandées chez les analystes de données ?*
-- *Quelles compétences sont associées à des salaires élevés ?*
-- *Quelles compétences sont les plus stratégiques à développer pour progresser dans ce domaine ?*
+🕵️ Looking for my SQL queries? They’re here: [projet_sql](/projet_sql/)
 
 
 
-# 🪚 Outils utilisés
-Pour explorer le marché des emplois d’analyste de données, j’ai utilisé : 
-- **SQL** pour interroger la base et extraire des insights clés
-- **PostgreSQL** pour gérer les données
-- **Visual Studio Code** pour exécuter mes requêtes
-- **Git & GitHub** pour le partage de mon travail.
+# Some background
+Formerly a graphic designer and freelance photographer specializing in wildlife photography, I am now transitioning towards a career that suits me better: **data analysis!**
+
+As a beginner in this field, I’m training in the key skills needed to become a data analyst, especially SQL. But how can I know exactly which skills to acquire in order to progress optimally and efficiently?
+The answer: by analyzing the data itself… and that’s exactly what I’m doing <ins>**with SQL!**</ins>
+
+Through my queries, I sought to answer the following questions:
+- *Which data analyst positions offer the best salaries?*
+- *What skills are required for these high-paying roles?*
+- *Which skills are most in demand among data analysts?*
+- *Which skills are associated with higher salaries?*
+- *Which skills are the most strategic to develop to advance in this field?*
+</br>
+</br>
 
 
-# Analyse !
-Chaque requête de ce projet avait pour objectif d’explorer un aspect spécifique du marché des emplois d’analyste de données/data. Voici comment j’ai abordé chaque question :
 
-### 1. Quels sont les emplois d’analyste de données/data les mieux rémunérés ?
-Pour identifier les postes les mieux rémunérés, j’ai filtré les offres d’analyste de données en fonction du salaire annuel moyen et de la localisation, en me concentrant sur les postes en télétravail. Cette requête met en évidence les opportunités les plus lucratives dans le domaine.
+# 🪚 Tools used
+To explore the job market for data analyst roles, I used:
+- **SQL** to query the database and extract key insights.
+- **PostgreSQL** to manage the data.
+- **Visual Studio Code** to run my queries.
+- **GitHub** to share my work.
+</br>
+</br>
 
-Cependant, la data sur les salaires en France est absente, et ne nous permet pas de voir correctement le marché Français. 
-Donc nous avons modifié la requête en enlevant la condition du salaire pour avoir un meilleur visuel. 
+
+# Analysis time !
+Each query in this project was designed to explore a specific aspect of the data analyst job market. Here’s how I approached each question:
+
+### 1. Which data analyst jobs offer the highest salaries?
+
+To identify the best paying positions, I filtered data analyst job listings based on average annual salary and location, focusing on remote positions. This query highlights the most lucrative opportunities in the field.
+
+However, salary data for France is missing, which prevents an accurate view of the French market.
+So, I modified the query by removing the salary condition to get a clearer picture.
 
 ```sql 
 SELECT
@@ -66,15 +70,21 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
-Que pouvons‑nous en tirer ?\
-Malheureusement, les données concernant la France sont peu fournies, ce qui n’est pas surprenant puisque cette base est principalement concentrée sur les États‑Unis.
-On peut tout de même voir que les postes sont presque tous en CDI !
+</br>
 
-### 2. Quelles compétences sont requises pour les emplois d’analyste de données/data les mieux rémunérés ?
-Pour comprendre quelles compétences sont requises pour les postes les mieux rémunérés, j’ai utilisé une jointure (JOIN) entre les offres d’emploi et les données sur les compétences, ce qui permet d’identifier celles que les employeurs privilégient pour les postes à haute rémunération.
+What can we take away from this?\
+Unfortunately, the data concerning France is quite limited, which isn’t surprising, as this database mainly focuses on the United States.
+Still, we can see that nearly all jobs are full time positions!
+</br>
+</br>
 
-Une fois de plus, les données concernant la France sont peu fournies, ce qui n’est pas surprenant puisque cette base est principalement concentrée sur les États‑Unis.\
- Donc j'ai changé la localisation de "France" et j'ai tenté la localisation "Anywhere" (Partout). Cela nous permettrait de voir des emplois en télétravail dans le monde entier, possible depuis la France.
+
+### 2. What skills are required for the highest-paying data analyst jobs?
+
+To understand which skills are needed for the **best paying roles**, I used a JOIN between the job listings and the skills data. This made it possible to identify which skills employers prioritize for high salary positions.
+
+Once again, the data related to France is quite limited, unsurprising given the U.S. focus of the dataset.
+So, I changed the location from “France” to “Anywhere” to include remote jobs worldwide, which could also be done from France.
 ```sql
 WITH top_paying_jobs AS (
     SELECT
@@ -103,18 +113,21 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY 
     salary_year_avg DESC;
 ```
-Le résultat est clair, les compétences les mieux rémunérées en télétravail depuis partout (y compris la France) sont les suivantes :
+The results are clear!\
+ The highest-paying remote skills (accessible from anywhere, including France) are:
+1. **SQL** (appears 12 times)
+2. **Python** (appears 11 times)
+3. **Tableau** (appears 8 times)
+4. **R** (appears 5 times)
+5. **Excel** (appears 3 times)
 
-1. **SQL** (Apparait 12 fois)
-2. **Python** (Apparait 11 fois)
-3. **Tableau** (Apparait 8 fois)
-4. **R** (Apparait 5 fois)
-5. **Excel** (Apparait 3 fois)
+And so it would seem focusing on these skills would be the best strategy to land the highest paying data analyst jobs!
+</br>
+</br>
 
-Il faudrait donc se concentrer sur ces compétences pour tenter de décrocher les emplois d’analyste de données/data les mieux rémunérés !
+### 3. What are the most in-demand skills for data analysts?
 
-### 3. Quelles sont les compétences les plus demandées pour les analystes de données/data ?
-Cette prochaine requête a permis d’identifier les compétences les plus souvent **demandées** dans les offres d’emploi, orientant ainsi l’attention vers les domaines les plus recherchés.
+This next query helped identify the skills **most frequently requested** in job postings, highlighting the skills or tools most sought after by employers.
 
 ```sql
 SELECT 
@@ -131,18 +144,20 @@ GROUP BY
 ORDER BY demand_count DESC
 LIMIT 5;
 ```
-Les 5 compétences les plus demandées sur le marché du travail global sont :
-1. SQL (Apparait 92628 fois)
-2. Excel (Apparait 67031 fois)
-3. Python (Apparait 57326 fois)
-4. Tableau (Apparait 46554 fois)
-5. Power BI (Apparait 39468 fois)
+The 5 most in demand skills on the global job market are:
+1. SQL (appears 92,628 times)
+2. Excel (appears 67,031 times)
+3. Python (appears 57,326 times)
+4. Tableau (appears 46,554 times)
+5. Power BI (appears 39,468 times)
 
-Cependant nous voulons affiner la recherche pour un emploi en France. Je changes donc la requête en ajoutant la condition suivante :
+However, we want to narrow down the search to jobs located in France.
+I modified the query by adding the following condition:
+
 ```sql
 AND job_postings_fact.job_location = 'France' 
 ```
-Ce qui nous donne : 
+Which gives us : 
 ```sql
 SELECT 
     skills_dim.skills,
@@ -159,25 +174,28 @@ GROUP BY
 ORDER BY demand_count DESC
 LIMIT 5;
 ```
-Cette nouvelle requête nous donne les 5 compétences les plus demandées sur le marché du travail en France. Ces compétences sont :
-1. **SQL** (Apparait 726 fois)
-2. **Python** (Apparait 534 fois)
-3. **Power BI** (Apparait 447 fois)
-4. **Excel** (Apparait 372 fois)
-5. **sas** (Apparait 318 fois)
+This new query gives us the 5 most in demand skills on the job market in France. These skills are:
+1. SQL (appears 726 times)
+2. Python (appears 534 times)
+3. Power BI (appears 447 times)
+4. Excel (appears 372 times)
+5. SAS (appears 318 times)
 
-*Finalement, des informations intéressantes a analyser !*\
-Nous pouvons en conclure que, parmi les 5 compétences les plus **demandées** sur le marché du travail global **-et-** celles les plus **demandées** en France, les compétences sur lesquelles je devrais me concentrer sont :
+*Finally, some interesting data to analyze!*\
+We can conclude that, among the top 5 most in demand skills globally and those most in demand in France, the skills I should focus on are:
 
-**1. SQL**\
-**2. Python**\
-**3. Excel**\
-**4. et 5.** Un outil de Business intelligence comme **Power BI** ou Tableau
+1. **SQL**
+2. **Python**
+3. **Excel**
+4. & 5. A Business Intelligence tool like **Power BI** or **Tableau**
 
-Ainsi, nous voyons qu’il est possible de nous concentrer sur moins de cinq compétences essentielles, ce qui me fera gagner du temps lors de ma formation !
+<ins>This shows me which core skills I should focus on, which will save me time during my training!</ins>
+</br>
+</br>
 
-### 4. Quelles sont les compétences les mieux rémunérées ?
-L’exploration des salaires moyens associés aux différentes compétences a permis de révéler quelles compétences sont les mieux rémunérées.
+### 4. Which skills are the highest-paying?
+
+Exploring the average salaries associated with different skills helped reveal which skills are the most highly compensated.
 ```sql
 SELECT 
     skills_dim.skills,
@@ -195,17 +213,21 @@ GROUP BY
 ORDER BY avg_salary DESC
 LIMIT 25;
 ```
-Voici un aperçu des résultats concernant les compétences les mieux rémunérées pour les analystes de données :
-- **Forte demande en compétences Big Data et Machine Learning :** Les salaires les plus élevés sont attribués aux analystes maîtrisant les technologies de Big Data *(PySpark, Couchbase)*, les outils de machine learning *(DataRobot, Jupyter)* et les bibliothèques Python *(Pandas, NumPy)*. Cela reflète la forte valorisation, par le secteur, des compétences en traitement de données et en modélisation prédictive.
+Here’s an overview of the results regarding the highest paying skills for data analysts:
 
-- **Maîtrise du développement et du déploiement logiciel :** La connaissance des outils de développement et de déploiement *(GitLab, Kubernetes, Airflow)* montre une convergence lucrative entre l’analyse de données et l’ingénierie, avec une forte demande pour les compétences facilitant l’automatisation et la gestion efficace des pipelines de données.
+- **High demand for Big Data and Machine Learning skills:** The highest salaries go to analysts proficient in Big Data technologies *(PySpark, Couchbase)*, machine learning tools *(DataRobot, Jupyter)*, and Python libraries *(Pandas, NumPy)*. This reflects the strong industry value placed on data processing and predictive modeling skills.
 
-- **Expertise en cloud computing :** La familiarité avec les outils cloud et d’ingénierie des données *(Elasticsearch, Databricks, GCP)* souligne l’importance croissante des environnements d’analyse basés sur le cloud, suggérant qu’une maîtrise du cloud augmente significativement le potentiel de rémunération dans le domaine de la data.
+- **Proficiency in software development and deployment:** Knowledge of development and deployment tools *(GitLab, Kubernetes, Airflow)* highlights a lucrative overlap between data analysis and engineering, with high demand for skills that enable automation and efficient management of data pipelines.
+
+- **Expertise in cloud computing:** Familiarity with cloud and data engineering tools *(Elasticsearch, Databricks, GCP)* underscores the growing importance of cloud based analytics environments, suggesting that cloud proficiency significantly increases earning potential in the data field.
+</br>
+</br>
 
 
-### 5. Quelles sont les compétences les plus intéressantes à apprendre ?
-Autrement dit, celles qui sont à la fois **très demandées <ins>et</ins> bien rémunérées.**\
-En combinant les informations sur la demande et les salaires, cette requête visait à identifier les compétences à la fois très demandées et bien rémunérées, afin de définir les priorités stratégiques en matière de développement des compétences.
+### 5. Which skills are the most strategic to learn?
+
+In other words, those that are both highly in demand <ins>**and**</ins> well paid.
+By combining information on demand and salaries, this query aimed to identify skills that are both highly sought after and well compensated, helping define strategic priorities for skill development.
 
 ```sql
 SELECT
@@ -231,52 +253,57 @@ ORDER BY
 LIMIT 25;
 ```
 
-Les compétences les plus stratégiques pour les analystes de données en 2023 se répartissent comme suit :
+The most strategic skills for data analysts in 2023 are distributed as follows:
 
-- **Langages de programmation les plus demandés :**\
-Python et R se distinguent par leur forte demande *(236 et 148 occurrences respectivement)*. Malgré cette popularité, leurs salaires moyens *(environ 101 000$ pour Python et 100 000$ pour R)* montrent que ces compétences sont très valorisées, mais aussi largement répandues sur le marché. 
+- **Most in-demand programming languages:**
+Python and R stand out for their high demand *(236 and 148 occurrences, respectively)*. Despite their popularity, their average salaries *(around $101,000 for Python and $100,000 for R)* indicate that these skills are highly valued, but also widely available in the market.
 
-- **Outils et technologies cloud :**\
-Les compétences liées à Snowflake, Azure, AWS ou BigQuery affichent une forte demande et des salaires élevés. Cela souligne l’importance croissante des plateformes cloud et des technologies Big Data dans l’analyse de données moderne.
+- **Cloud tools and technologies:**
+Skills related to Snowflake, Azure, AWS, or BigQuery show both high demand and high salaries. This highlights the growing importance of cloud platforms and Big Data technologies in modern data analysis.
 
-- **Outils de Business Intelligence et de visualisation :**\
-Des outils comme Tableau et Looker, avec respectivement 230 et 49 mentions, et des salaires moyens d’environ 99 000$ et 104 000$, mettent en avant le rôle essentiel de la visualisation et de la BI pour transformer les données en insights exploitables.
+- **Business Intelligence and visualization tools:**
+Tools like Tableau and Looker, with 230 and 49 mentions respectively, and average salaries of around $99,000 and $104,000, underscore the essential role of BI and visualization in turning data into actionable insights.
 
-- **Technologies de bases de données :**\
-La demande pour les compétences en bases de données traditionnelles et NoSQL *(Oracle, SQL Server, NoSQL)*, avec des salaires moyens compris entre 97 000$ et 105 000$, montre que la maîtrise du stockage, de la gestion et de la récupération des données reste indispensable.
-
+- **Database technologies:**
+Demand for skills in traditional and NoSQL databases *(Oracle, SQL Server, NoSQL)*, with average salaries ranging from $97,000 to $105,000, shows that expertise in storing, managing, and retrieving data remains indispensable.
+</br>
+</br>
+</br>
 
 # Conclusion
-Informations générales issus de l’analyse:
+So what are the general insights from this analysis? Let's see:
 
-1. **Postes d’analyste de données les mieux rémunérés :**\
-Il existe des postes d’analyste de données en télétravail, mais les données salariales pour la France restent insuffisantes. On peut néanmoins constater que la quasi-totalité des postes sont en CDI !
+- **Highest paying data analyst positions:**
+Remote data analyst roles exist, but salary data for France is insufficient. However, nearly all jobs in France are full-time contracts (CDI)!
 
-2. **Compétences pour les postes les mieux rémunérés :**\
- Les emplois bien rémunérés exigent une maîtrise avancée de SQL, ce qui en fait une compétence clé pour accéder aux plus hauts salaires.
+- **Skills for the highest paying roles:**
+Well paid jobs require advanced SQL proficiency, making it a key skill to access top salaries.
 
-3. **Compétences les plus demandées :**\
- SQL est également la compétence la plus recherchée sur le marché des analystes de données, la rendant indispensable pour les candidats.
+- **Most in demand skills:**
+SQL is also the most sought after skill in the data analyst market, making it essential for candidates.
 
-4. **Compétences associées à des salaires élevés :**\
- Des compétences spécialisées comme SVN et Solidity sont liées aux salaires moyens les plus élevés, soulignant la valeur des expertises de niche.
+- **Skills associated with high salaries:**
+Specialized skills like SVN and Solidity are linked to the highest average salaries, highlighting the value of niche expertise.
 
-5. **Compétences optimales pour la valeur sur le marché :**\
- SQL domine à la fois en termes de demande et de salaire moyen, ce qui en fait <ins>l’une des compétences les plus stratégiques à acquérir</ins> pour maximiser sa valeur sur le marché du travail.
-
-
-# 💡 Ce que j'ai appris 
-
-- J’ai appris les bases de SQL ainsi que la logique qui structure ce langage.
-- Je me suis familiarisé avec la création et la gestion de bases de données sous **PostgreSQL.**
-- J’ai découvert la puissance de SQL pour trier, filtrer et comparer efficacement des millions de lignes de données, et pour rendre l’information plus claire et exploitable.
-- J’ai appris à utiliser **Visual Studio Code** pour rédiger et exécuter mes requêtes SQL.
-- Je me suis initié à **GitHub** afin de partager mes analyses et documenter mes projets.
+- **Optimal skills for market value:**
+SQL dominates in both demand and average salary, making it <ins>**one of the most strategic skills to acquire**</ins> to maximize market value.
+</br>
+</br>
 
 
- # 🤔 En ce qui me concerne
+# 💡 What I've Learned
 
- Ce projet m’a permis de renforcer mes compétences en SQL tout en identifiant les compétences les plus demandées et les mieux rémunérées pour guider l’apprentissage et la recherche d’emploi en tant qu’analyste de données.
+- I learned the basics of SQL and the logic that structures this language.
+- I became familiar with creating and managing databases using PostgreSQL.
+- I discovered the power of SQL to efficiently sort, filter, and compare millions of rows of data, making information clearer and more actionable.
+- I learned to use Visual Studio Code to write and run SQL queries.
+- I started using GitHub to share my analyses and document my projects.
+</br>
+</br>
 
- **La suite :**\
- Je vais continuer de m'exercer sur SQL et orienter mon apprentissage vers d'autres compétences tel que Python, Power BI et eventuellement des compétences spécialisées !
+# 🤔 Personal Takeaways
+
+This project allowed me to strengthen my SQL skills while identifying the most in-demand and highest-paying skills, guiding my learning and job search as a data analyst.
+
+*So what's next for me?*\
+I'll continue practicing SQL and be focusing my time learning other skills such as Python, Power BI, and some specialized skills in the future!
