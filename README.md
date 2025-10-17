@@ -12,7 +12,7 @@ By focusing specifically on data analyst roles, this project explores:
 
 🕵️ Looking for my SQL queries? They’re here: [projet_sql](/projet_sql/)
 
-
+</br>
 
 # Some background
 Formerly a graphic designer and freelance photographer specializing in wildlife photography, I am now transitioning towards a career that suits me better: **data analysis!**
@@ -27,8 +27,6 @@ Through my queries, I sought to answer the following questions:
 - *Which skills are associated with higher salaries?*
 - *Which skills are the most strategic to develop to advance in this field?*
 </br>
-</br>
-
 
 
 # 🪚 Tools used
@@ -37,7 +35,6 @@ To explore the job market for data analyst roles, I used:
 - **PostgreSQL** to manage the data.
 - **Visual Studio Code** to run my queries.
 - **GitHub** to share my work.
-</br>
 </br>
 
 
@@ -75,7 +72,6 @@ LIMIT 10;
 What can we take away from this?\
 Unfortunately, the data concerning France is quite limited, which isn’t surprising, as this database mainly focuses on the United States.
 Still, we can see that nearly all jobs are full time positions!
-</br>
 </br>
 
 
@@ -122,7 +118,6 @@ The results are clear!\
 5. **Excel** (appears 3 times)
 
 And so it would seem focusing on these skills would be the best strategy to land the highest paying data analyst jobs!
-</br>
 </br>
 
 ### 3. What are the most in-demand skills for data analysts?
@@ -191,7 +186,6 @@ We can conclude that, among the top 5 most in demand skills globally and those m
 
 <ins>This shows me which core skills I should focus on, which will save me time during my training!</ins>
 </br>
-</br>
 
 ### 4. Which skills are the highest-paying?
 
@@ -220,7 +214,6 @@ Here’s an overview of the results regarding the highest paying skills for data
 - **Proficiency in software development and deployment:** Knowledge of development and deployment tools *(GitLab, Kubernetes, Airflow)* highlights a lucrative overlap between data analysis and engineering, with high demand for skills that enable automation and efficient management of data pipelines.
 
 - **Expertise in cloud computing:** Familiarity with cloud and data engineering tools *(Elasticsearch, Databricks, GCP)* underscores the growing importance of cloud based analytics environments, suggesting that cloud proficiency significantly increases earning potential in the data field.
-</br>
 </br>
 
 
@@ -268,7 +261,6 @@ Tools like Tableau and Looker, with 230 and 49 mentions respectively, and averag
 Demand for skills in traditional and NoSQL databases *(Oracle, SQL Server, NoSQL)*, with average salaries ranging from $97,000 to $105,000, shows that expertise in storing, managing, and retrieving data remains indispensable.
 </br>
 </br>
-</br>
 
 # Conclusion
 So what are the general insights from this analysis? Let's see:
@@ -288,7 +280,6 @@ Specialized skills like SVN and Solidity are linked to the highest average salar
 - **Optimal skills for market value:**
 SQL dominates in both demand and average salary, making it <ins>**one of the most strategic skills to acquire**</ins> to maximize market value.
 </br>
-</br>
 
 
 # 💡 What I've Learned
@@ -298,7 +289,6 @@ SQL dominates in both demand and average salary, making it <ins>**one of the mos
 - I discovered the power of SQL to efficiently sort, filter, and compare millions of rows of data, making information clearer and more actionable.
 - I learned to use Visual Studio Code to write and run SQL queries.
 - I started using GitHub to share my analyses and document my projects.
-</br>
 </br>
 
 # 🤔 Personal Takeaways
