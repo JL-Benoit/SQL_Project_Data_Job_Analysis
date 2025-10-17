@@ -256,7 +256,6 @@ Tools like Tableau and Looker, with 230 and 49 mentions respectively, and averag
 - **Database technologies:**
 Demand for skills in traditional and NoSQL databases *(Oracle, SQL Server, NoSQL)*, with average salaries ranging from $97,000 to $105,000, shows that expertise in storing, managing, and retrieving data remains indispensable.
 </br>
-</br>
 
 # Conclusion
 So what are the general insights from this analysis? Let's see:
@@ -275,8 +274,6 @@ Specialized skills like SVN and Solidity are linked to the highest average salar
 
 - **Optimal skills for market value:**
 SQL dominates in both demand and average salary, making it <ins>**one of the most strategic skills to acquire**</ins> to maximize market value.
-</br>
-
 
 # 💡 What I've Learned
 
@@ -285,7 +282,6 @@ SQL dominates in both demand and average salary, making it <ins>**one of the mos
 - I discovered the power of SQL to efficiently sort, filter, and compare millions of rows of data, making information clearer and more actionable.
 - I learned to use Visual Studio Code to write and run SQL queries.
 - I started using GitHub to share my analyses and document my projects.
-</br>
 
 # 🤔 Personal Takeaways
 
