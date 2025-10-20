@@ -1,9 +1,8 @@
 /*
-Question : Quels sont les emplois d’analyste de données/data les mieux rémunérés ?
-- Identifier le top 10 des postes d’analyste de données/data les mieux rémunérés en télétravail.
-- Se concentrer uniquement sur les postes avec un salaire renseigné (aucune valeur NULL).
-- Objectif : mettre en lumière les opportunités les mieux rémunérées pour les analystes de données,
-offrant une vue d’ensemble sur la santé et l’attractivité du poste sur le marché de l’emploi.
+Question: What are the highest paying data analyst jobs?
+- Identify the top 10 highest-paid remote data analyst positions.
+- Focus only on roles with a listed salary (no NULL values).
+- Objective: highlight the best-paid opportunities for data analysts, providing an overview of the role’s market health and attractiveness.
 */
 
 SELECT
@@ -27,8 +26,9 @@ LIMIT 10;
 
 
 
-/*Cependant, la data en France avec la condition "salary_year_avg IS NOT NULL" ne nous permet pas de voir correctement le marché Francais. 
-Donc nous avons modifié la requête en enlevant la condition "salary_year_avg IS NOT NULL" pour avoir un meilleur visuel. 
+/*
+However, the data for France with the condition “salary_year_avg IS NOT NULL” does not allow us to accurately reflect the French market.
+So, we modified the query by removing the condition “salary_year_avg IS NOT NULL” to obtain better visibility.
 */
 
 SELECT

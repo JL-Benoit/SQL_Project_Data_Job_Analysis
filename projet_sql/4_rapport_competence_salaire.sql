@@ -1,9 +1,8 @@
 /*
-Question : Quelles sont les compétences les mieux rémunérées ?
-- Examiner le salaire moyen associé à chaque compétence pour les postes d’analyste de données/data.
-- Se concentrer sur les rôles avec des salaires spécifiés, quel que soit l’emplacement.
-- Objectif : Révéler comment différentes compétences influencent les niveaux de salaire des 
-analystes de données/data et aider à identifier les compétences les plus "rentables" à acquérir.
+Question: What are the highest paying skills?
+- Analyze the average salary associated with each skill for data analyst roles.
+- Focus on positions with specified salaries, regardless of location.
+Objective: reveal how different skills influence salary levels for data analysts and help identify the most “profitable” skills to acquire.
 */
 
 SELECT 
@@ -21,14 +20,3 @@ GROUP BY
         skills_dim.skills
 ORDER BY avg_salary DESC
 LIMIT 25;
-
-
-/*
-Nous pouvons voir que :
-- Les postes d’analystes de données/data les mieux rémunérés combinent les compétences d'ingénierie des données, 
-apprentissage automatique et compétences cloud — des outils comme PySpark, Databricks et Airflow dominent le classement.
-- Les compétences de base en Python (Pandas, NumPy, Scikit-learn) restent essentielles, 
-mais leur valeur augmente lorsqu’elles sont associées à des plateformes Big Data ou cloud.
-- La maîtrise des outils DevOps (GitLab, Bitbucket, Jenkins) démontre une forte collaboration avec les équipes d’ingénierie et augmente les salaires.
-- L’expertise cloud (GCP, Kubernetes) devient indispensable pour les postes à distance bien rémunérés.
-*/

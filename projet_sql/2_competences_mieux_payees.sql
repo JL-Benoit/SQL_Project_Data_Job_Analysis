@@ -1,9 +1,7 @@
 /*
-Question : Quelles compétences sont requises pour les emplois d’analyste de données/data les mieux rémunérés ?
-- Utiliser les 10 postes d’analyste de données/data les mieux payés issus de la première requête.
-- Ajouter les compétences spécifiques exigées pour ces postes.
-- Objectif : Permettre de voir en détail quelles compétences sont recherchées dans les emplois les mieux payés, 
-et d’aider les candidats à savoir sur quoi se concentrer pour viser les meilleurs salaires.
+Question: What skills are required for the highest paying data analyst jobs?
+- Include the specific skills required for these roles.
+- Objective: provide a detailed view of the most in demand skills in the highest-paying jobs, helping candidates understand what to focus on to target top salaries.
 */
 WITH top_paying_jobs AS (
     SELECT
@@ -35,9 +33,8 @@ ORDER BY
 
 
 /*
-Les données disponibles en France avec la condition "salary_year_avg IS NOT NULL" ne permettent pas d’obtenir une analyse exploitable.
-Changons notre localisation de "France" et tentons "Anywhere" (Partout). Cela nous permettrait de voir des emplois en télétravail dans le monde entier,
-possible depuis la France.
+The available data for France with the condition “salary_year_avg IS NOT NULL” does not allow for any meaningful analysis.
+Let’s change our location from “France” to “Anywhere.” This will allow us to view remote jobs worldwide that are accessible from France.
 */
 WITH top_paying_jobs AS (
     SELECT
@@ -65,16 +62,3 @@ INNER JOIN skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
 INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY 
     salary_year_avg DESC;
-
-
-/*
-Le resultat est clair, les compétences les mieux rémunérés en télétravail depuis la France sont les suivantes:
-
-1. SQL (Apparait 12 fois)
-2. Python (Apparait 11 fois)
-3. Tableau (Apparait 8 fois)
-4. R (Apparait 5 fois)
-5. Excel (Apparait 3 fois)
-
-Nous devrions donc nous concentrer sur ces compétences pour tenter de décrocher les emplois d’analyste de données/data les mieux rémunérés !
-*/

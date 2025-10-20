@@ -4,8 +4,8 @@ YouTube channel.
 The course is based on a database he created, containing extensive information about the job market for data related roles in 2023 (positions, salaries, locations, key skills, etc.).
 
 By focusing specifically on data analyst roles, this project explores:
-- the highest-paying positions.
-- the most in-demand skills.
+- the highest paying positions.
+- the most in demand skills.
 - the skills associated with high salaries.
 </br>
 
@@ -20,7 +20,7 @@ The answer: by analyzing the data itself… and that’s exactly what I’m doin
 
 Through my queries, I sought to answer the following questions:
 - *Which data analyst positions offer the best salaries?*
-- *What skills are required for these high-paying roles?*
+- *What skills are required for these high paying roles?*
 - *Which skills are most in demand among data analysts?*
 - *Which skills are associated with higher salaries?*
 - *Which skills are the most strategic to develop to advance in this field?*
@@ -35,7 +35,7 @@ To explore the job market for data analyst roles, I used:
 
 
 # Analysis time !
-Each query in this project was designed to explore a specific aspect of the data analyst job market. Here’s how I approached each question:
+Each query in this project was designed to explore a specific aspect of the data analyst job market. Here’s how I approached each question: 
 
 ### 1. Which data analyst jobs offer the highest salaries?
 
@@ -71,7 +71,7 @@ Still, we can see that nearly all jobs are full time positions!
 </br>
 
 
-### 2. What skills are required for the highest-paying data analyst jobs?
+### 2. What skills are required for the highest paying data analyst jobs?
 
 To understand which skills are needed for the **best paying roles**, I used a JOIN between the job listings and the skills data. This made it possible to identify which skills employers prioritize for high salary positions.
 
@@ -106,17 +106,17 @@ ORDER BY
     salary_year_avg DESC;
 ```
 The results are clear!\
- The highest-paying remote skills (accessible from anywhere, including France) are:
+ The highest paying remote skills (accessible from anywhere, including France) are:
 1. **SQL** (appears 12 times)
 2. **Python** (appears 11 times)
 3. **Tableau** (appears 8 times)
 4. **R** (appears 5 times)
 5. **Excel** (appears 3 times)
 
-And so it would seem focusing on these skills would be the best strategy to land the highest paying data analyst jobs!
+And so it would seem that focusing on these skills would be the best strategy to land the highest paying data analyst jobs!
 </br>
 
-### 3. What are the most in-demand skills for data analysts?
+### 3. What are the most in demand skills for data analysts?
 
 This next query helped identify the skills **most frequently requested** in job postings, highlighting the skills or tools most sought after by employers.
 
@@ -183,7 +183,7 @@ We can conclude that, among the top 5 most in demand skills globally and those m
 <ins>This shows me which core skills I should focus on, which will save me time during my training!</ins>
 </br>
 
-### 4. Which skills are the highest-paying?
+### 4. Which skills are the highest paying?
 
 Exploring the average salaries associated with different skills helped reveal which skills are the most highly compensated.
 ```sql
@@ -203,7 +203,7 @@ GROUP BY
 ORDER BY avg_salary DESC
 LIMIT 25;
 ```
-Here’s an overview of the results regarding the highest paying skills for data analysts:
+Here’s an overview of the results regarding the highest paying skills for data analysts: 
 
 - **High demand for Big Data and Machine Learning skills:** The highest salaries go to analysts proficient in Big Data technologies *(PySpark, Couchbase)*, machine learning tools *(DataRobot, Jupyter)*, and Python libraries *(Pandas, NumPy)*. This reflects the strong industry value placed on data processing and predictive modeling skills.
 
@@ -244,7 +244,7 @@ LIMIT 25;
 
 The most strategic skills for data analysts in 2023 are distributed as follows:
 
-- **Most in-demand programming languages:**
+- **Most in demand programming languages:**
 Python and R stand out for their high demand *(236 and 148 occurrences, respectively)*. Despite their popularity, their average salaries *(around $101,000 for Python and $100,000 for R)* indicate that these skills are highly valued, but also widely available in the market.
 
 - **Cloud tools and technologies:**
@@ -285,7 +285,7 @@ SQL dominates in both demand and average salary, making it <ins>**one of the mos
 
 # 🤔 Personal Takeaways
 
-This project allowed me to strengthen my SQL skills while identifying the most in-demand and highest-paying skills, guiding my learning and job search as a data analyst.
+This project allowed me to strengthen my SQL skills while identifying the most in demand and highest paying skills, guiding my learning and job search as a data analyst.
 
 *So what's next for me?*\
 I'll continue practicing SQL and be focusing my time learning other skills such as Python, Power BI, and some specialized skills in the future!

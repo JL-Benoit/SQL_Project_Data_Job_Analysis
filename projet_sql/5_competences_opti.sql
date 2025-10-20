@@ -1,10 +1,9 @@
 /*
-Question : Quelles sont les compétences les plus intéressantes à apprendre 
-(autrement dit, celles qui sont à la fois très demandées et bien rémunérées) ?
-- Identifier les compétences les plus recherchées sur le marché et associées à des salaires élevés pour les postes d’analyste de données/data.
-- Se concentrer sur les emplois à distance dont les salaires sont clairement indiqués.
-Objectif : Repérer les compétences qui offrent à la fois une bonne sécurité d’emploi (forte demande) et de meilleures perspectives financières (salaires élevés). 
-Cette approche fournit des pistes stratégiques pour orienter notre développement de carrière dans le domaine de l’analyse de données/data.
+Question: What are the most valuable skills to learn (i.e., those that are both highly demanded and well paid)?
+- Identify the most sought-after skills in the market that are also associated with high salaries for data analyst roles.
+- Focus on remote jobs with clearly specified salaries.
+Objective: identify skills that offer both strong job security (high demand) and better financial prospects (high salaries). 
+This approach provides strategic guidance for career development in the field of data analysis.
 */
 
 WITH skills_demand AS (
@@ -53,8 +52,8 @@ ORDER BY
     demand_count DESC;
     
 /*
-C'est un sacré bout de code qui nous permet de trouver ce que les compétences les plus recherchées sur le marché 
-et associées à des salaires élevés pour les postes d’analyste de données/data. Nous pouvons le simplifier.
+It’s quite a thicc piece of code that allows us to see which skills are both highly demanded in the market and associated with high salaries for data analyst roles.
+We can simplify it.
 */
 
 SELECT
@@ -78,10 +77,3 @@ ORDER BY
     avg_salary DESC,
     demand_count DESC
 LIMIT 25;
-
-
-/*
-Les compétences qui offrent à la fois une bonne sécurité d’emploi (forte demande) et de meilleures perspectives financières (salaires élevés) sont très différentes.
-Celles qui sont les plus demandées sont les compétences précédemment mentionnées, telles que SQL, Python et Tableau, tandis que les compétences associées aux salaires les plus élevés concernent le cloud, comme AWS et Azure.
-Un jour, ce serait une bonne idée de se lancer et d’apprendre ces compétences !
-*/
